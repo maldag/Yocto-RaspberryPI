@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote fetch="git://git.openembedded.org" name="oe" review=""/>
-    <remote fetch="git://git.yoctoproject.org" name="yocto" review=""/>
-    <remote fetch="git://github.com/meta-qt5" name="qt5" review=""/>
-    
-    <!-- List all the repositories you want to fetch -->
-    <!-- "name"     git repository's name on hosting server
-         "remote"   the remote host from above (if not the default)
-         "revision" commitish to checkout (if not the default)
-         "path"     directory where git repository gets cloned/synced 
-    -->   
-    <project path="poky" 		remote="yocto" name="poky" branch="krogoth" revision="master" />  
-    <project path="meta-openembedded"   remote="oe" name="meta-openembedded" revision="master" />
-    <project path="meta-qt5"      	remote="qt5" name="meta-qt5" revision="master" />
-    <project path="meta-raspberrypi"    remote="yocto" name="meta-raspberrypi" revision="master" />
-      
+
+  <default sync-j="4" revision="krogoth"/>
+
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://github.com/gt3389b" name="gt3389b"/>
+  <remote fetch="https://github.com/openembedded" name="oe"/>
+  <remote fetch="https://github.com/meta-qt5" name="qt5" review=""/>
+
+  <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
+  <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="qt5" revision="krogoth" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="yocto" revision="krogoth" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
+
+  <project remote="gt3389b" name="meta-buildenv" path="sources/meta-buildenv">
+	<copyfile dest="setup-environment" src="setup"/>
+  </project>
 </manifest>
