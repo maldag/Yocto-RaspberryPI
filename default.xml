@@ -14,6 +14,6 @@
   <project remote="yocto" revision="master" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
 
   <project remote="gt3389b" name="meta-buildenv" revision="master" path="sources/meta-buildenv">
-	<copyfile dest="setup-environment" src="setup"/>
+	<copyfile dest="setup-environment.sh" src="setup.sh"/>
   </project>
 </manifest>
