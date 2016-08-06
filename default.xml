@@ -11,9 +11,9 @@
   <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
   <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
   <project remote="qt5" revision="krogoth" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="yocto" revision="krogoth" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
+  <project remote="yocto" revision="master" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
 
-  <project remote="gt3389b" name="meta-buildenv" path="sources/meta-buildenv">
+  <project remote="gt3389b" name="meta-buildenv" revision="master" path="sources/meta-buildenv">
 	<copyfile dest="setup-environment" src="setup"/>
   </project>
 </manifest>
