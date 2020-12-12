@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="4" revision="krogoth"/>
+  <default sync-j="4" revision="dunfell"/>
 
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
-  <remote fetch="https://github.com/gt3389b" name="gt3389b"/>
   <remote fetch="https://github.com/openembedded" name="oe"/>
   <remote fetch="https://github.com/meta-qt5" name="qt5" review=""/>
 
-  <project remote="yocto" revision="krogoth" name="poky" path="sources/poky"/>
-  <project remote="oe" revision="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="qt5" revision="krogoth" name="meta-qt5" path="sources/meta-qt5" />
-  <project remote="yocto" revision="master" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
-
-  <project remote="gt3389b" name="meta-buildenv" revision="master" path="sources/meta-buildenv">
-	<copyfile dest="setup-environment.sh" src="setup.sh"/>
-  </project>
+  <project remote="yocto" revision="dunfell" name="poky" path="sources/poky"/>
+  <project remote="oe" revision="dunfell" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="qt5" revision="dunfell" name="meta-qt5" path="sources/meta-qt5" />
+  <project remote="yocto" revision="dunfell" name="meta-raspberrypi" path="sources/meta-raspberrypi" />
 </manifest>
